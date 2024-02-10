@@ -1670,6 +1670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1a5b17ac11f604aa0e36a88f8f0e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 9064446644705274216}
+  cameraSensitivity: 1
+  offset: {x: 0, y: 2.5, z: -6.25}
 --- !u!114 &654252122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4887,7 +4890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d754ba9f5ec21f44fa1078f63026f52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
   jumpForce: 10
 --- !u!54 &9064446644705274212
 Rigidbody:
@@ -4903,8 +4906,14 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!4 &9064446644705274216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6861001031047078948, guid: 51f568d2f0ab8e34aa19c72f5ca45363,
+    type: 3}
+  m_PrefabInstance: {fileID: 9064446644705274209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!136 &9064446644705274217
 CapsuleCollider:
   m_ObjectHideFlags: 0
