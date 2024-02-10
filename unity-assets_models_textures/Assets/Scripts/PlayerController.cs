@@ -4,9 +4,11 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    public Transform respawnPosition; // The position where the player will respawn
+    public float respawnYThreshold = -10f; // Y position threshold for respawn
 
     private Rigidbody rb;
-    private bool isGrounded;
+    public bool isGrounded;
 
     void Start()
     {
@@ -27,11 +29,18 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        // Check if the player's Y position falls below the respawn threshold
+        if (transform.position.y < respawnYThreshold)
+        {
+            Respawn();
+        }
     }
 
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -43,12 +52,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    // private void OnCollisionExit(Collision collision)
+    // {
+    //     // Check if the collision is with an object tagged as "Ground"
+    //     if (collision.gameObject.CompareTag("Ground"))
+    //     {
+    //         isGrounded = false;
+    //     }
+    // }
+    void Respawn()
     {
-        // Check if the collision is with an object tagged as "Ground"
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+        // Move the player to the respawn position
+        transform.position = respawnPosition.position;
+        rb.velocity = Vector3.zero; // Reset velocity
     }
 }
