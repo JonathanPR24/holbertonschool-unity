@@ -1796,11 +1796,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6280141533075806140, guid: 46f0cfea66f10714c8ea393cde9f68cc,
-        type: 3}
-      propertyPath: m_PixelPerfect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7125906885007404758, guid: 46f0cfea66f10714c8ea393cde9f68cc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1844,21 +1839,6 @@ PrefabInstance:
     - target: {fileID: 7125906885007404758, guid: 46f0cfea66f10714c8ea393cde9f68cc,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125906885007404758, guid: 46f0cfea66f10714c8ea393cde9f68cc,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125906885007404758, guid: 46f0cfea66f10714c8ea393cde9f68cc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125906885007404758, guid: 46f0cfea66f10714c8ea393cde9f68cc,
-        type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125906885007404758, guid: 46f0cfea66f10714c8ea393cde9f68cc,
@@ -1924,12 +1904,7 @@ PrefabInstance:
     - target: {fileID: 7909374892684053782, guid: 46f0cfea66f10714c8ea393cde9f68cc,
         type: 3}
       propertyPath: m_Name
-      value: TimerCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7909374892684053782, guid: 46f0cfea66f10714c8ea393cde9f68cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: '"TimerCanvas"'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46f0cfea66f10714c8ea393cde9f68cc, type: 3}
