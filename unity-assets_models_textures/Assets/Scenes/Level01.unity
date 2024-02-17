@@ -2525,7 +2525,7 @@ PrefabInstance:
     - target: {fileID: 410181406625666685, guid: 46f0cfea66f10714c8ea393cde9f68cc,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: TimeCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46f0cfea66f10714c8ea393cde9f68cc, type: 3}
@@ -2786,3 +2786,16 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9064446644705274209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9064446644705274222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064446644705274210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3ca10a493a3104ab3108c7ca266c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 0}
