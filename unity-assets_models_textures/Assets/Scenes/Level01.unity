@@ -2525,7 +2525,7 @@ PrefabInstance:
     - target: {fileID: 410181406625666685, guid: 46f0cfea66f10714c8ea393cde9f68cc,
         type: 3}
       propertyPath: m_Name
-      value: TimeCanvas
+      value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46f0cfea66f10714c8ea393cde9f68cc, type: 3}
