@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float respawnYThreshold = -10f; // Y position threshold for respawn
 
     private Rigidbody rb;
-    public bool isGrounded;
+    private bool isGrounded;
 
     void Start()
     {
@@ -21,7 +21,12 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * moveSpeed * Time.deltaTime;
+        // Get the forward direction of the camera
+        Vector3 cameraForward = Camera.main.transform.forward;
+        cameraForward.y = 0f; // Keep the direction horizontal
+
+        // Calculate movement direction based on camera forward and player input
+        Vector3 movement = (cameraForward * verticalInput + Camera.main.transform.right * horizontalInput).normalized * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
 
         // Handle player jump
@@ -40,7 +45,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
+        isGrounded = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -52,14 +57,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // private void OnCollisionExit(Collision collision)
-    // {
-    //     // Check if the collision is with an object tagged as "Ground"
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = false;
-    //     }
-    // }
     void Respawn()
     {
         // Move the player to the respawn position
